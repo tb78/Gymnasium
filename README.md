@@ -12,6 +12,12 @@
 
 </p>
 
+
+<img width="1648" height="990" alt="Screenshot_1" src="https://github.com/user-attachments/assets/b8544e0b-da6e-47a3-9850-ae94091c3d14" />
+<img width="2164" height="1096" alt="Screenshot_2" src="https://github.com/user-attachments/assets/49fc1178-58bd-4695-8f5a-b06eaffa5740" />
+
+
+
 Gymnasium is an open source Python library for developing and comparing reinforcement learning algorithms by providing a standard API to communicate between learning algorithms and environments, as well as a standard set of environments compliant with that API. This is a fork of OpenAI's [Gym](https://github.com/openai/gym) library by its maintainers (OpenAI handed over maintenance a few years ago to an outside team), and is where future maintenance will occur going forward.
 
 The documentation website is at [gymnasium.farama.org](https://gymnasium.farama.org), and we have a public discord server (which we also use to coordinate development work) that you can join here: https://discord.gg/bnJ6kubTg6
