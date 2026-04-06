@@ -6,9 +6,9 @@
 
 <br>
 
-[![Stars](https://img.shields.io/github/stars/your-username/position-sizer-mt5?style=for-the-badge&color=00D4AA&label=Stars)](https://github.com/your-username/position-sizer-mt5/stargazers)
-[![Forks](https://img.shields.io/github/forks/your-username/position-sizer-mt5?style=for-the-badge&color=4D9FFF&label=Forks)](https://github.com/your-username/position-sizer-mt5/network)
-[![Issues](https://img.shields.io/github/issues/your-username/position-sizer-mt5?style=for-the-badge&color=FF4D6A&label=Issues)](https://github.com/your-username/position-sizer-mt5/issues)
+[![Stars](https://img.shields.io/github/stars/torvalds/linux?style=for-the-badge&color=00D4AA&label=Stars)](https://github.com/your-username/volume-profile-mt5/stargazers)
+[![Forks](https://img.shields.io/github/forks/torvalds/linux?style=for-the-badge&color=4D9FFF&label=Forks)](https://github.com/your-username/volume-profile-mt5/network)
+[![Issues](https://img.shields.io/github/issues/torvalds/linux?style=for-the-badge&color=FF4D6A&label=Issues)](https://github.com/your-username/volume-profile-mt5/issues)
 [![Platform](https://img.shields.io/badge/MT5%20%2F%20MT4-Compatible-00D4AA?style=for-the-badge)](https://www.metatrader5.com)
 [![License](https://img.shields.io/badge/License-MIT-4D9FFF?style=for-the-badge)](LICENSE)
 
