@@ -1,8 +1,8 @@
 <div align="center">
 
-# Position Sizer MT5 / MT4
+# 📊 Position Sizer MT5 / MT4
 
-**Professional risk management and position sizing tool for MetaTrader 5 and MetaTrader 4 — featuring real-time calculations, risk visualization, and a modern trading dashboard.**
+**Professional risk management and position sizing tool for MetaTrader 5 and MetaTrader 4 — built for precision, clarity, and real trading workflows.**
 
 <br>
 
@@ -16,7 +16,7 @@
 
 ---
 
-## Screenshot
+## 🖥️ Screenshot
 
 <div align="center">
 
@@ -26,17 +26,17 @@
 
 ---
 
-## Overview
+## 📌 Overview
 
-**Position Sizer MT5/MT4** is a risk management tool designed for traders who want precise control over their positions.
+**Position Sizer MT5/MT4** is a risk management tool designed for traders who want precise control over every trade.
 
-Instead of guessing lot sizes, this tool calculates everything automatically based on your risk tolerance and trade setup.
+Instead of guessing lot sizes, the system calculates everything automatically based on your risk tolerance and setup.
 
-It combines accurate calculation logic with a modern desktop interface inspired by professional trading platforms.
+Built with a modern desktop UI inspired by professional trading platforms.
 
 ---
 
-## What It Does
+## ⚙️ What It Does
 
 The application calculates optimal position sizing and visualizes trade risk in real time:
 
@@ -51,7 +51,7 @@ The application calculates optimal position sizing and visualizes trade risk in 
 
 ---
 
-## Features
+## ✨ Features
 
 | Feature | Description |
 |---|---|
@@ -60,26 +60,26 @@ The application calculates optimal position sizing and visualizes trade risk in 
 | Risk Slider | Fine-tune risk percentage interactively |
 | BUY / SELL Modes | Direction-based calculations |
 | Risk Meter | Visual gauge showing current risk level |
-| Trade Simulation | Simulate trade execution and outcomes |
-| Trade History | Track recent trades with results |
-| Live Price Feed | Simulated real-time price movement |
-| Modern UI | Dark themed trading dashboard |
+| Trade Simulation | Simulate trade execution |
+| Trade History | Track trades with results |
+| Live Price Feed | Simulated real-time price |
+| Modern UI | Clean dark trading dashboard |
 
 ---
 
-## Interface
+## 🧩 Interface
 
-The application is structured into multiple panels:
+The application is structured into key sections:
 
-- Sidebar — Navigation and system overview  
-- Trade Parameters — Input values (balance, risk %, entry, SL, TP)  
-- Results Panel — Lot size, risk, reward, R:R  
-- Risk Meter — Visual gauge for risk exposure  
-- Trade History — Executed trades with outcomes  
+- Sidebar — navigation and system overview  
+- Trade Parameters — balance, risk %, entry, SL, TP  
+- Results Panel — lot size, risk, reward, R:R  
+- Risk Meter — visual exposure gauge  
+- Trade History — executed trades  
 
 ---
 
-## Calculation Logic
+## 🧠 Calculation Logic
 
 ```
 Risk Amount = Account Balance × Risk %
@@ -93,73 +93,70 @@ R:R Ratio = Reward / Risk
 
 ---
 
-## Risk Visualization
+## 📉 Risk Visualization
 
-The built-in Risk Meter provides instant feedback:
+The built-in **Risk Meter** gives instant feedback:
 
 - Low Risk → below 1.5%  
 - Moderate Risk → 1.5% – 3%  
 - High Risk → above 3%  
 
-Color-coded feedback helps prevent overexposure.
+Helps prevent overexposure and poor risk decisions.
 
 ---
 
-## Quick Start
+## 🚀 Quick Start
 
 **Requirements:**
-- Windows 10 / 11
-- .NET 6+
-- Visual Studio 2022
+- Windows 10 / 11  
+- .NET 6+  
+- Visual Studio 2022  
 
 ```bash
 git clone https://github.com/your-username/position-sizer-mt5.git
 ```
 
-Open the solution and run:
+Run the project:
 
 ```
 F5
 ```
 
-No external dependencies required.
-
 ---
 
-## How to Use
+## 📖 How to Use
 
 1. Enter account balance  
-2. Set your risk percentage  
-3. Define entry, stop loss, and take profit  
-4. Choose BUY or SELL  
-5. Review calculated lot size and R:R  
-6. Use OPEN TRADE to simulate execution  
-7. Track results in trade history  
+2. Set risk percentage  
+3. Define entry, stop loss, take profit  
+4. Select BUY or SELL  
+5. Review calculated values  
+6. Click OPEN TRADE to simulate  
+7. Monitor results in history  
 
 ---
 
-## Designed for Trading
+## 🎯 Designed for Trading
 
-- Fast calculations  
+- Fast and responsive  
 - Clear visual feedback  
-- Minimal and focused interface  
+- Focused on decision making  
+- No unnecessary complexity  
 
 ---
 
-## Roadmap
+## 🛣️ Roadmap
 
 - [ ] MT5 native integration (MQL5)
 - [ ] MT4 version
 - [ ] Real broker connection
-- [ ] Auto trade execution
+- [ ] Auto execution
 - [ ] Advanced analytics
 - [ ] Export trade history
 
 ---
 
-## Contributing
-
-Pull requests are welcome.
+## 🤝 Contributing
 
 ```
 1. Fork the repository
@@ -170,7 +167,7 @@ Pull requests are welcome.
 
 ---
 
-## License
+## 📄 License
 
 MIT License
 
