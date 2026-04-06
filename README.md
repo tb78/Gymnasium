@@ -1,80 +1,162 @@
+# 🤖 Auto Scripts — MT5 Script Manager
+
 <div align="center">
-<a href="z"><img src="https://img.shields.io/badge/ChatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white"/></a>
-<a href="z"><img src="https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visual%20studio&logoColor=white"/></a>
-<a href="z"><img src="https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white"/></a>
+
+![Platform](https://img.shields.io/badge/Platform-MetaTrader%205-blue?style=for-the-badge&logo=windows)
+![Language](https://img.shields.io/badge/Language-C%23%20%2F%20WinForms-purple?style=for-the-badge&logo=dotnet)
+![Version](https://img.shields.io/badge/Version-1.0.0-gold?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
+**A professional desktop application for managing and running MT5 trading scripts with a modern dark UI.**
+
 </div>
 
+---
+
+## 📸 UI Preview
+
+> Dark-themed, borderless WinForms application with sidebar navigation, live MT5 connection status, script runner, and order preview grid.
+
+| Component | Description |
+|-----------|-------------|
+| 🎨 Theme | Dark Navy (`#12_1428`) with Blue/Red/Gold accents |
+| 🖥️ Framework | .NET WinForms (C#) |
+| 📐 Window | 1300 × 920 px, resizable, borderless, draggable |
+
+---
+
+## ✨ Features
+
+- **Close All Orders Script** — closes all open positions and cancels all pending orders on the MT5 account instantly
+- **Live MT5 Connection Panel** — shows server, login, and connection status with one-click disconnect/reconnect
+- **Order Preview** — view open positions and pending orders in grid tables before executing
+- **Confirmation Gate** — requires checkbox confirmation before running any destructive script
+- **Animated Progress Bar** — step-by-step visual feedback during script execution
+- **Status Bar** — real-time clock and live script status messages
+- **Modern Borderless Window** — custom title bar with minimize, maximize, and close controls
+
+---
+
+## 🗂️ Script Library
+
+| Script Name | Type | Description |
+|-------------|------|-------------|
+| ❌ Close All Orders | Utility | Closes all open positions & pending orders |
+| *(more scripts coming soon)* | — | — |
+
+---
+
+## 🖥️ UI Structure
+
+```
+┌─────────────────────────────────────────────────────┐
+│  Top Bar  [Auto Scripts — MT5 Script Manager]  [─□✕] │
+├──────────┬──────────────────────────────────────────┤
+│          │  Header Card  [Script Name + Run Button]  │
+│ Sidebar  ├──────────────────────────────────────────┤
+│          │  Script Info Card  |  What It Does Card   │
+│ 🗂 Library│  ─────────────────────────────────────── │
+│ 🏠 Home  │  Preview Card                             │
+│ 📊 Dash  │    ┌─ Open Positions ─┬─ Pending Orders ─┐│
+│ 📅 Events│    │  EURUSD  Buy ... │  GBPUSD  Limit.. ││
+│ ℹ  About │    └──────────────────┴──────────────────┘│
+│ ✉  Contact│  ─────────────────────────────────────── │
+│          │  Warning + Confirmation + Run Button       │
+│ MT5 Conn.│                                            │
+└──────────┴──────────────────────────────────────────┘
+│  Status Bar               HH:MM:SS  DD.MM.YYYY       │
+└─────────────────────────────────────────────────────┘
+```
+
+---
+
+## 🎨 Color Palette
+
+| Name | Hex | Usage |
+|------|-----|-------|
+| `BgDark` | `#121428` | Main background |
+| `BgPanel` | `#191C37` | Sidebar |
+| `BgCard` | `#1E223E` | Cards |
+| `AccentBlue` | `#3F51B5` | Active nav, badges |
+| `AccentRed` | `#E53935` | Run button, warnings |
+| `AccentGold` | `#FB8C00` | Pending order badges |
+| `AccentGreen` | `#2EA043` | Success states |
+| `TextMain` | `#E6E8FF` | Primary text |
+| `TextSub` | `#8C94C8` | Secondary text |
+
+---
+
+## ⚙️ Requirements
+
+- [.NET 6+ / .NET Framework 4.8](https://dotnet.microsoft.com/)
+- Windows OS (WinForms)
+- MetaTrader 5 terminal (for live trading)
+- Visual Studio 2022+ (recommended)
+
+---
+
+## 🚀 Getting Started
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/your-username/auto-scripts-mt5.git
+
+# 2. Open in Visual Studio
+# Open WinFormsApp1.sln
+
+# 3. Build & Run
+# Press F5 or use Build > Start Debugging
+```
+
+---
+
+## 📋 How to Use — Close All Orders Script
+
+1. Launch the application
+2. Verify MT5 connection status in the bottom-left sidebar (green dot = connected)
+3. Review **Open Positions** and **Pending Orders** in the Preview section
+4. Check the confirmation box: *"I understand that this will close all positions..."*
+5. Click **▶ Run Script**
+6. Watch the progress bar and status bar for real-time feedback
+7. All orders will be marked as **Closed / Cancelled** upon completion
+
+> ⚠️ **Warning:** This action is irreversible. All open positions and pending orders will be permanently closed/canceled.
+
+---
+
+## 📁 Project Structure
+
+```
+WinFormsApp1/
+├── Form1.cs              # Main form — all UI and logic
+├── Form1.Designer.cs     # Auto-generated designer file
+├── Program.cs            # Entry point
+└── WinFormsApp1.csproj   # Project file
+```
+
+---
+
+## 🛠️ Built With
+
+- **C# / WinForms** — UI framework
+- **System.Drawing** — Custom painting & GDI+
+- **System.Windows.Forms.Timer** — Script progress animation
+- **DataGridView** — Order tables with custom cell formatting
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome! For major changes, please open an issue first to discuss what you'd like to change.
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
 
 <div align="center">
-
-<!-- Nothing weird to see here -->
-<p align="center">
-  <a href="https://readme.andyruwruw.com/api/now-playing?open">
-    <!-- Music bars move to the beat and are colored based on the track's happiness, danceability and energy! -->
-    <img src="https://raw.githubusercontent.com/andyruwruw/andyruwruw/master/example/now-playing.svg">
-    <!-- This is how you'd make the call dynamically <img src="https://readme.andyruwruw.com/api/now-playing"> -->
-  </a>
-</p>
-
-
-
-## 💎 Jewelry Website Comparison Project
-
-This project aims to **compare different jewelry e-commerce websites** based on various criteria. The goal is to help users **analyze price, product variety, quality, user experience, and reliability** across multiple jewelry sites.
-
-### 🎯 Project Goal
-- Objectively compare jewelry websites  
-- Provide users with insights for more informed shopping  
-- Highlight each site’s strengths and weaknesses through data-driven analysis  
-
-### 🔍 Comparison Criteria
-- Product prices  
-- Product variety (gold, diamonds, silver, etc.)  
-- User reviews and ratings  
-- Website usability (UI/UX)  
-- Shipping, returns, and customer service  
-- Security and certifications  
-
-### 🛠️ Technologies Used
-- (Add the technologies you use here: e.g., Python, JavaScript, React, Node.js, etc.)  
-- Web scraping / API integration (if applicable)  
-- Data analysis and visualization tools  
-
-### 📌 Target Audience
-- Users shopping for jewelry online  
-- Developers analyzing e-commerce platforms  
-- People looking to compare price and quality  
-
-### ✨ Features
-- Compare prices across multiple jewelry websites  
-- Analyze product variety, reviews, and ratings  
-- Evaluate site usability and customer service  
-- Visualize data with charts and graphs  
-- Real-time updates for selected sites (future)  
-
-
-
-<img width="1648" height="990" alt="Screenshot_1" src="https://github.com/user-attachments/assets/b8544e0b-da6e-47a3-9850-ae94091c3d14" />
-<img width="2164" height="1096" alt="Screenshot_2" src="https://github.com/user-attachments/assets/49fc1178-58bd-4695-8f5a-b06eaffa5740" />
-
-<!-- CONTRIBUTING -->
-## Contributing
-<a href="https://opencollective.com/democracyearth/backer/0/website"><img src="https://opencollective.com/democracyearth/backer/0/avatar.svg"></a>
-<a href="https://opencollective.com/democracyearth/backer/1/website"><img src="https://opencollective.com/democracyearth/backer/1/avatar.svg"></a>
-<a href="https://opencollective.com/democracyearth/backer/2/website"><img src="https://opencollective.com/democracyearth/backer/2/avatar.svg"></a>
-<a href="https://opencollective.com/democracyearth/backer/3/website"><img src="https://opencollective.com/democracyearth/backer/3/avatar.svg"></a>
-<a href="https://opencollective.com/democracyearth/backer/4/website"><img src="https://opencollective.com/democracyearth/backer/4/avatar.svg"></a>
-<a href="https://opencollective.com/democracyearth/backer/5/website"><img src="https://opencollective.com/democracyearth/backer/5/avatar.svg"></a>
-<a href="https://opencollective.com/democracyearth/backer/6/website"><img src="https://opencollective.com/democracyearth/backer/6/avatar.svg"></a>
-<a href="https://opencollective.com/democracyearth/backer/7/website"><img src="https://opencollective.com/democracyearth/backer/7/avatar.svg"></a>
-<a href="https://opencollective.com/democracyearth/backer/8/website"><img src="https://opencollective.com/democracyearth/backer/8/avatar.svg"></a>
-<a href="https://opencollective.com/democracyearth/backer/9/website"><img src="https://opencollective.com/democracyearth/backer/9/avatar.svg"></a>
-<a href="https://opencollective.com/democracyearth/backer/10/website"><img src="https://opencollective.com/democracyearth/backer/10/avatar.svg"></a>
-<a href="https://opencollective.com/democracyearth/backer/11/website"><img src="https://opencollective.com/democracyearth/backer/11/avatar.svg"></a>
-
-### ⚖️ License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Disclaimer 
-
-This software is for educational and research purposes only. Any legal liability that may arise from the use of the software lies entirely with the user. The developer cannot be held responsible for any misuse of the software.
+Made with ❤️ by <strong>Auto Scripts Team</strong> — v1.0.0
+</div>
