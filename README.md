@@ -1,15 +1,16 @@
 <div align="center">
 
 # ⚡ MT5 Auto Scripts
-### *One click. All orders gone. Zero stress.*
+
+**A professional desktop tool for executing MT5 trading scripts instantly — built for traders who can't afford to be slow.**
 
 <br>
 
-[![Stars](https://img.shields.io/github/stars/your-username/mt5-auto-scripts?style=for-the-badge&color=FFD700)](https://github.com/your-username/mt5-auto-scripts/stargazers)
-[![Forks](https://img.shields.io/github/forks/your-username/mt5-auto-scripts?style=for-the-badge&color=3F51B5)](https://github.com/your-username/mt5-auto-scripts/network)
-[![Issues](https://img.shields.io/github/issues/your-username/mt5-auto-scripts?style=for-the-badge&color=E53935)](https://github.com/your-username/mt5-auto-scripts/issues)
+[![Stars](https://img.shields.io/github/stars/torvalds/linux?style=for-the-badge&color=FFD700&label=Stars)](https://github.com/your-username/mt5-auto-scripts/stargazers)
+[![Forks](https://img.shields.io/github/forks/torvalds/linux?style=for-the-badge&color=3F51B5&label=Forks)](https://github.com/your-username/mt5-auto-scripts/network)
+[![Issues](https://img.shields.io/github/issues/torvalds/linux?style=for-the-badge&color=E53935&label=Issues)](https://github.com/your-username/mt5-auto-scripts/issues)
 [![License](https://img.shields.io/badge/License-MIT-2EA043?style=for-the-badge)](LICENSE)
-![Platform](https://img.shields.io/badge/MT5-Compatible-blue?style=for-the-badge)
+[![Platform](https://img.shields.io/badge/Platform-MetaTrader%205-1565C0?style=for-the-badge)](https://www.metatrader5.com)
 
 </div>
 
@@ -17,22 +18,21 @@
 
 ## 🚨 The Problem Every Trader Knows
 
-> *"Market is crashing. You need to close EVERYTHING. NOW."*
+> *"Market is crashing. You need to close everything. Now."*
 >
 > You open MT5 — close position 1, close position 2, cancel order 1, cancel order 2...
 >
 > **By the time you're done, the damage is done.**
 
-**MT5 Auto Scripts solves this in a single click.**
+MT5 Auto Scripts gives you a single button to close every open position and cancel every pending order across your entire account — instantly, with a clean confirmation flow and real-time feedback.
 
 ---
 
-## 🖥️ Screenshot
+## Screenshot
 
 <div align="center">
 
-<!-- Add your screenshot here -->
-<!-- Drag & drop your image into this repo and replace the line below -->
+<!-- Replace with your screenshot -->
 ![App Screenshot](assets/screenshot.png)
 
 </div>
@@ -43,95 +43,125 @@
 
 <div align="center">
 
-<!-- Add your video here -->
-<!-- Drag & drop your .mp4 into a GitHub Issue editor → copy the link → paste below -->
+<!-- Drag & drop your .mp4 into a GitHub Issue editor, copy the generated link, and paste it here -->
 https://github.com/your-username/mt5-auto-scripts/assets/your-video.mp4
 
 </div>
 
 ---
 
-## ✅ What It Does
+## What It Does
 
-| Feature | Details |
-|--------|---------|
-| 🔴 **Close All Positions** | Instantly closes every open market position on your MT5 account |
-| 🚫 **Cancel All Pending Orders** | Wipes all pending / limit / stop orders at once |
-| 🌍 **All Symbols** | Works across every pair, gold, indices — everything |
-| 🔒 **Confirmation Gate** | Forces you to confirm before execution — no accidental clicks |
-| 📊 **Live Preview** | Shows exactly what will be closed *before* you run |
-| 📡 **MT5 Connection Status** | Real-time server + login info in the sidebar |
-| ⏱️ **Progress Feedback** | Step-by-step progress bar so you always know what's happening |
+**Close All Orders Script** connects to your active MT5 session and performs the following in sequence:
+
+1. Reads all open market positions from the account
+2. Sends a close request for each position at the current market price
+3. Reads all pending orders (limit, stop, stop-limit)
+4. Cancels every pending order individually
+5. Verifies each closure and reports the final result
+
+The entire process takes a few seconds and gives you step-by-step progress feedback throughout.
 
 ---
 
-## 🚀 Quick Start
+## Features
+
+| Feature | Description |
+|---|---|
+| Close All Positions | Closes every open market position regardless of symbol, direction, or volume |
+| Cancel All Pending Orders | Removes all limit, stop, and stop-limit orders from the account |
+| Multi-Symbol Support | Works across forex pairs, metals, indices, crypto — any instrument on your MT5 broker |
+| Pre-Execution Preview | Before running, the app shows a full table of every position and order that will be affected |
+| Confirmation Requirement | The Run button stays disabled until you explicitly check the confirmation box — no accidents |
+| Live Connection Status | Sidebar shows your MT5 server name, login ID, and live connection state at all times |
+| Animated Progress Bar | Each step of the script is shown in real time: connect → close positions → cancel orders → verify → done |
+| Disconnect / Reconnect | Toggle your MT5 connection directly from the sidebar without restarting the app |
+| Real-Time Status Bar | Bottom bar shows the current operation and a live clock |
+
+---
+
+## 🛡️ Safety Design
+
+This tool handles irreversible trading actions, so it was designed with several layers of protection:
+
+- **Confirmation gate** — the Run button is visually disabled and non-clickable until the user ticks the acknowledgement checkbox
+- **Order preview** — a full grid of all open positions and pending orders is displayed before any action is taken, so you always know exactly what will be closed
+- **Connection check** — if MT5 is disconnected, the script refuses to run and shows a warning in the status bar
+- **Warning banner** — a clearly visible red warning reminds the user that the action cannot be undone
+- **No auto-run** — the script never runs automatically; every execution requires a manual trigger
+
+---
+
+## Quick Start
+
+**Requirements:**
+- Windows 10 or 11
+- [.NET 6 or higher](https://dotnet.microsoft.com/en-us/download)
+- MetaTrader 5 terminal installed and logged in
+- Visual Studio 2022 (to build from source)
+
+**Steps:**
 
 ```bash
-# 1. Clone
+# Clone the repository
 git clone https://github.com/your-username/mt5-auto-scripts.git
 
-# 2. Open solution in Visual Studio 2022
+# Open the solution in Visual Studio 2022
 # File → Open → WinFormsApp1.sln
 
-# 3. Build & Run — press F5
+# Build and run — press F5
 ```
 
-> ✅ No external dependencies. No NuGet packages. Just build and run.
+> No external NuGet packages required. The project builds and runs out of the box on any Windows machine with .NET 6+.
 
 ---
 
-## 🛡️ Safety First
+## How to Use
 
-This tool was designed with **accidental execution in mind:**
-
-- 🔲 You **must** tick the confirmation checkbox before the Run button activates
-- 👁️ A full **preview of all affected orders** is shown before running
-- ⚠️ A bold warning banner reminds you the action is irreversible
-- 📶 The script **refuses to run** if MT5 is disconnected
-
----
-
-## ⚙️ Requirements
-
-- Windows 10 / 11
-- [.NET 6 or higher](https://dotnet.microsoft.com/en-us/download)
-- MetaTrader 5 terminal
-- Visual Studio 2022 *(to build from source)*
+1. Launch the application
+2. Check the sidebar — confirm MT5 shows **Connected** with your server and login details
+3. Review the **Open Positions** and **Pending Orders** tables in the Preview section
+4. Read the warning, then tick the confirmation checkbox
+5. Click **Run Script**
+6. Watch the progress bar — the status bar will update at each step
+7. When complete, all positions will show **Closed** and all pending orders will show **Cancelled**
 
 ---
 
-## 🗺️ Roadmap
+## Roadmap
 
 - [x] Close All Orders Script
-- [ ] Close by Symbol (e.g. close only XAUUSD)
-- [ ] Close only Buy / only Sell positions
-- [ ] Scheduled auto-close (time-based)
-- [ ] Telegram notification after execution
+- [ ] Close by Symbol — close only positions on a specific instrument (e.g. XAUUSD only)
+- [ ] Close by Direction — close only Buy positions, or only Sell positions
+- [ ] Close by Loss — automatically close any position in drawdown beyond a set threshold
+- [ ] Scheduled Execution — trigger a close script at a specific time
+- [ ] Telegram Notification — send a message to your Telegram after execution completes
 
-> 💡 Have an idea? [Open an issue](https://github.com/your-username/mt5-auto-scripts/issues) and let's build it.
+> Have a script idea? [Open an issue](https://github.com/your-username/mt5-auto-scripts/issues) and describe what you need.
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
-Pull requests are welcome. For major changes, open an issue first.
+Pull requests are welcome. For significant changes, please open an issue first to discuss the approach.
 
-1. Fork the repo
-2. Create your branch: `git checkout -b feature/my-script`
-3. Commit your changes: `git commit -m 'Add: my new script'`
-4. Push: `git push origin feature/my-script`
+```
+1. Fork the repository
+2. Create a feature branch:  git checkout -b feature/close-by-symbol
+3. Commit your changes:      git commit -m "Add: close by symbol script"
+4. Push to your fork:        git push origin feature/close-by-symbol
 5. Open a Pull Request
+```
 
 ---
 
 ## ⭐ Support
 
-If this saved you from a bad trade — **leave a star.** It helps more traders find this tool.
+If this saved you from a bad trade, consider leaving a star — it helps other traders find this tool.
 
 <div align="center">
 
-[![Star this repo](https://img.shields.io/badge/⭐%20Star%20this%20repo-FFD700?style=for-the-badge)](https://github.com/your-username/mt5-auto-scripts)
+[![Star this repo](https://img.shields.io/badge/Star%20this%20repo-FFD700?style=for-the-badge)](https://github.com/your-username/mt5-auto-scripts)
 
 </div>
 
@@ -139,6 +169,6 @@ If this saved you from a bad trade — **leave a star.** It helps more traders f
 
 <div align="center">
 
-**MT5 Auto Scripts** · Built for traders, by traders · v1.0.0
+**MT5 Auto Scripts** &nbsp;·&nbsp; Built for traders, by traders &nbsp;·&nbsp; v1.0.0
 
 </div>
