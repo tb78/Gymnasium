@@ -1,4 +1,3 @@
-```md
 <div align="center">
 
 # Session Highlighter MT5/MT4
