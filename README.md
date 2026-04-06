@@ -1,34 +1,22 @@
 <div align="center">
 
-# ⚡ MT5 Auto Scripts
+# ▦ Volume Profile MT5/MT4
 
-**A professional desktop tool for executing MT5 trading scripts instantly — built for traders who can't afford to be slow.**
+**TradingView-style Volume Profile indicator for MetaTrader 5 and MetaTrader 4 — with POC, Value Area, Buy/Sell split, and session stats. All inside a clean desktop manager.**
 
 <br>
 
-[![Stars](https://img.shields.io/github/stars/torvalds/linux?style=for-the-badge&color=FFD700&label=Stars)](https://github.com/your-username/mt5-auto-scripts/stargazers)
-[![Forks](https://img.shields.io/github/forks/torvalds/linux?style=for-the-badge&color=3F51B5&label=Forks)](https://github.com/your-username/mt5-auto-scripts/network)
-[![Issues](https://img.shields.io/github/issues/torvalds/linux?style=for-the-badge&color=E53935&label=Issues)](https://github.com/your-username/mt5-auto-scripts/issues)
-[![License](https://img.shields.io/badge/License-MIT-2EA043?style=for-the-badge)](LICENSE)
-[![Platform](https://img.shields.io/badge/Platform-MetaTrader%205-1565C0?style=for-the-badge)](https://www.metatrader5.com)
+[![Stars](https://img.shields.io/github/stars/torvalds/linux?style=for-the-badge&color=00D4AA&label=Stars)](https://github.com/your-username/volume-profile-mt5/stargazers)
+[![Forks](https://img.shields.io/github/forks/torvalds/linux?style=for-the-badge&color=4D9FFF&label=Forks)](https://github.com/your-username/volume-profile-mt5/network)
+[![Issues](https://img.shields.io/github/issues/torvalds/linux?style=for-the-badge&color=FF4D6A&label=Issues)](https://github.com/your-username/volume-profile-mt5/issues)
+[![Platform](https://img.shields.io/badge/MT5%20%2F%20MT4-Compatible-00D4AA?style=for-the-badge)](https://www.metatrader5.com)
+[![License](https://img.shields.io/badge/License-MIT-4D9FFF?style=for-the-badge)](LICENSE)
 
 </div>
 
 ---
 
-## 🚨 The Problem Every Trader Knows
-
-> *"Market is crashing. You need to close everything. Now."*
->
-> You open MT5 — close position 1, close position 2, cancel order 1, cancel order 2...
->
-> **By the time you're done, the damage is done.**
-
-MT5 Auto Scripts gives you a single button to close every open position and cancel every pending order across your entire account — instantly, with a clean confirmation flow and real-time feedback.
-
----
-
-## Screenshot
+## 📸 Screenshot
 
 <div align="center">
 
@@ -43,24 +31,33 @@ MT5 Auto Scripts gives you a single button to close every open position and canc
 
 <div align="center">
 
-<!-- Drag & drop your .mp4 into a GitHub Issue editor, copy the generated link, and paste it here -->
-https://github.com/your-username/mt5-auto-scripts/assets/your-video.mp4
+<!-- Drag & drop your .mp4 into a GitHub Issue editor, copy the generated link, paste here -->
+https://github.com/your-username/volume-profile-mt5/assets/your-video.mp4
 
 </div>
 
 ---
 
+## Why Volume Profile?
+
+Most MT5/MT4 traders rely on time-based indicators that tell you *when* something happened. Volume Profile tells you *where* the real trading activity is concentrated — which price levels attracted the most volume, where institutions loaded positions, and where the market is likely to react again.
+
+If you trade with SMC, ICT, or pure price action, Volume Profile is the missing layer.
+
+---
+
 ## What It Does
 
-**Close All Orders Script** connects to your active MT5 session and performs the following in sequence:
+**Volume Profile MT5** renders a TradingView-style horizontal volume histogram directly on your MT5/MT4 chart and exposes all key levels through a dedicated desktop manager:
 
-1. Reads all open market positions from the account
-2. Sends a close request for each position at the current market price
-3. Reads all pending orders (limit, stop, stop-limit)
-4. Cancels every pending order individually
-5. Verifies each closure and reports the final result
-
-The entire process takes a few seconds and gives you step-by-step progress feedback throughout.
+| Level | Description |
+|---|---|
+| POC — Point of Control | The single price level with the highest traded volume in the session |
+| VAH — Value Area High | Upper boundary of the zone where 70% of volume was traded |
+| VAL — Value Area Low | Lower boundary of the same 70% value area |
+| Value Area | The full high-volume zone between VAH and VAL — the institutional range |
+| Buy / Sell Split | Each bar split into buy-side and sell-side volume for delta analysis |
+| Session Stats | High, low, range, and dominant side (buy vs sell) per trading session |
 
 ---
 
@@ -68,27 +65,26 @@ The entire process takes a few seconds and gives you step-by-step progress feedb
 
 | Feature | Description |
 |---|---|
-| Close All Positions | Closes every open market position regardless of symbol, direction, or volume |
-| Cancel All Pending Orders | Removes all limit, stop, and stop-limit orders from the account |
-| Multi-Symbol Support | Works across forex pairs, metals, indices, crypto — any instrument on your MT5 broker |
-| Pre-Execution Preview | Before running, the app shows a full table of every position and order that will be affected |
-| Confirmation Requirement | The Run button stays disabled until you explicitly check the confirmation box — no accidents |
-| Live Connection Status | Sidebar shows your MT5 server name, login ID, and live connection state at all times |
-| Animated Progress Bar | Each step of the script is shown in real time: connect → close positions → cancel orders → verify → done |
-| Disconnect / Reconnect | Toggle your MT5 connection directly from the sidebar without restarting the app |
-| Real-Time Status Bar | Bottom bar shows the current operation and a live clock |
+| Live Price Feed | Real-time price ticker with tick-by-tick updates from your connected MT5 account |
+| Multiple Profile Types | Session, Fixed Range, Visible Range, and Daily profile modes |
+| POC Line | Dashed gold line across the chart marking the Point of Control |
+| Value Area Bands | Dotted teal/red lines marking VAH and VAL with price labels |
+| Buy / Sell Split Mode | Toggle to split each volume bar into buy-side (teal) and sell-side (red) delta |
+| Timeframe Selector | Switch between M1, M5, M15, H1, H4, D1 without leaving the manager |
+| Key Levels Panel | Live readout of POC, VAH, VAL, Value Area %, and total session volume |
+| Session Stats Panel | Current session (London / New York / Tokyo), high, low, range, dominant side |
+| Levels Table | Full sortable table of all VP levels with price, volume, buy %, sell %, and a visual distribution bar |
+| MT5 Connection Status | Live connection indicator showing your server name and account login |
+| Apply / Reset | Push updated settings to the MT5 terminal instantly with animated feedback |
 
 ---
 
-## 🛡️ Safety Design
+## 🛡️ Designed for Real Trading Conditions
 
-This tool handles irreversible trading actions, so it was designed with several layers of protection:
-
-- **Confirmation gate** — the Run button is visually disabled and non-clickable until the user ticks the acknowledgement checkbox
-- **Order preview** — a full grid of all open positions and pending orders is displayed before any action is taken, so you always know exactly what will be closed
-- **Connection check** — if MT5 is disconnected, the script refuses to run and shows a warning in the status bar
-- **Warning banner** — a clearly visible red warning reminds the user that the action cannot be undone
-- **No auto-run** — the script never runs automatically; every execution requires a manual trigger
+- **No repainting** — all levels are calculated on closed bars only
+- **No lag** — volume histogram is rendered natively, not as an overlay on a separate chart
+- **Disconnection safe** — the manager detects MT5 disconnections and blocks all operations until reconnected
+- **Session-aware** — automatically detects London, New York, and Tokyo sessions
 
 ---
 
@@ -97,78 +93,94 @@ This tool handles irreversible trading actions, so it was designed with several 
 **Requirements:**
 - Windows 10 or 11
 - [.NET 6 or higher](https://dotnet.microsoft.com/en-us/download)
-- MetaTrader 5 terminal installed and logged in
+- MetaTrader 5 or MetaTrader 4 terminal, logged into any account
 - Visual Studio 2022 (to build from source)
-
-**Steps:**
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/mt5-auto-scripts.git
+git clone https://github.com/your-username/volume-profile-mt5.git
 
-# Open the solution in Visual Studio 2022
-# File → Open → WinFormsApp1.sln
+# Open in Visual Studio 2022
+# File → Open → VolumeProfile.sln
 
 # Build and run — press F5
 ```
 
-> No external NuGet packages required. The project builds and runs out of the box on any Windows machine with .NET 6+.
+> No external NuGet packages required. Builds and runs out of the box on any Windows machine with .NET 6+.
 
 ---
 
 ## How to Use
 
 1. Launch the application
-2. Check the sidebar — confirm MT5 shows **Connected** with your server and login details
-3. Review the **Open Positions** and **Pending Orders** tables in the Preview section
-4. Read the warning, then tick the confirmation checkbox
-5. Click **Run Script**
-6. Watch the progress bar — the status bar will update at each step
-7. When complete, all positions will show **Closed** and all pending orders will show **Cancelled**
+2. Confirm the sidebar shows **CONNECTED** with your server and login details
+3. Select your **Profile Type** — Session, Fixed Range, Visible Range, or Daily
+4. Choose your **Timeframe** from the top bar (M1 → D1)
+5. Toggle **Show POC** and **Show Value Area** as needed
+6. Enable **Buy / Sell Split** to see delta distribution per level
+7. Click **▶ Apply** — settings are pushed to the MT5 terminal
+8. Use the **Key Levels** and **Session Stats** panels for a quick reference at a glance
+9. The **Levels Table** at the bottom shows the full breakdown with visual distribution bars
+
+---
+
+## Reading the Chart
+
+```
+VAH ─────────────────────────────────────  ← Top of 70% volume zone
+     ████████████████████████████████████
+     ██████████████████████████
+POC ══════════════════════════════════════  ← Highest volume level (gold dashed)
+     ██████████████████████████████████████████  (widest bar)
+     ████████████████████
+VAL ─────────────────────────────────────  ← Bottom of 70% volume zone
+```
+
+- **Wide bars** = high volume = price acceptance — market spent time here
+- **Narrow bars** = low volume = price rejection — market moved through quickly
+- **POC** is the strongest magnet level — price tends to return to it
+- **VAH / VAL** act as support and resistance — breaks with volume confirm trend
 
 ---
 
 ## Roadmap
 
-- [x] Close All Orders Script
-- [ ] Close by Symbol — close only positions on a specific instrument (e.g. XAUUSD only)
-- [ ] Close by Direction — close only Buy positions, or only Sell positions
-- [ ] Close by Loss — automatically close any position in drawdown beyond a set threshold
-- [ ] Scheduled Execution — trigger a close script at a specific time
-- [ ] Telegram Notification — send a message to your Telegram after execution completes
+- [x] Volume Profile with POC, VAH, VAL
+- [x] Buy / Sell split (delta mode)
+- [x] Session stats (London / NY / Tokyo)
+- [x] Live price ticker
+- [ ] Multi-session overlay — show multiple session profiles on one chart
+- [ ] Alert system — get notified when price returns to POC or breaks Value Area
+- [ ] Export levels to CSV for backtesting
+- [ ] MT4 build — full parity with the MT5 version
+- [ ] Telegram integration — send key levels to your phone automatically
 
-> Have a script idea? [Open an issue](https://github.com/your-username/mt5-auto-scripts/issues) and describe what you need.
+> Have a feature request? [Open an issue](https://github.com/your-username/volume-profile-mt5/issues) and describe what you need.
 
 ---
 
 ## Contributing
 
-Pull requests are welcome. For significant changes, please open an issue first to discuss the approach.
+Pull requests are welcome. For significant changes, please open an issue first.
 
 ```
 1. Fork the repository
-2. Create a feature branch:  git checkout -b feature/close-by-symbol
-3. Commit your changes:      git commit -m "Add: close by symbol script"
-4. Push to your fork:        git push origin feature/close-by-symbol
+2. Create a feature branch:  git checkout -b feature/multi-session
+3. Commit your changes:      git commit -m "Add: multi-session overlay"
+4. Push to your fork:        git push origin feature/multi-session
 5. Open a Pull Request
 ```
 
 ---
 
-## ⭐ Support
+## License
 
-If this saved you from a bad trade, consider leaving a star — it helps other traders find this tool.
-
-<div align="center">
-
-[![Star this repo](https://img.shields.io/badge/Star%20this%20repo-FFD700?style=for-the-badge)](https://github.com/your-username/mt5-auto-scripts)
-
-</div>
+[MIT](LICENSE) — free to use, modify, and distribute.
 
 ---
 
 <div align="center">
 
-**MT5 Auto Scripts** &nbsp;·&nbsp; Built for traders, by traders &nbsp;·&nbsp; v1.0.0
+**Volume Profile MT5/MT4** &nbsp;·&nbsp; Built for traders, by traders &nbsp;·&nbsp; v2.1.0
 
 </div>
