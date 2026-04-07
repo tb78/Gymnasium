@@ -1,26 +1,26 @@
 <div align="center">
 
-# Session Highlighter MT5/MT4
+# 🧠 Smart Money Indicator MT5/MT4
 
-Modern trading session visualization tool with real-time chart rendering, session overlays, and a custom-built desktop interface. Designed for traders who want clean, fast, and informative session-based analysis.
+**Advanced Smart Money Concepts (SMC) visualization tool with real-time market structure, liquidity zones, order blocks, and institutional logic simulation. Built for precision traders.**
 
 <br>
 
-[![Platform](https://img.shields.io/badge/MT5%20%2F%20MT4-Compatible-4D9FFF?style=for-the-badge)](https://www.metatrader5.com)
-[![UI](https://img.shields.io/badge/Interface-Modern%20Desktop-00D4AA?style=for-the-badge)]
-[![Status](https://img.shields.io/badge/Status-Active-00D4AA?style=for-the-badge)]
-[![License](https://img.shields.io/badge/License-MIT-4D9FFF?style=for-the-badge)](LICENSE)
+![Platform](https://img.shields.io/badge/MT5%20%2F%20MT4-Compatible-00D4AA?style=for-the-badge)
+![Framework](https://img.shields.io/badge/.NET-6%2B-512BD4?style=for-the-badge)
+![UI](https://img.shields.io/badge/Desktop-WinForms-4D9FFF?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-FF4D6A?style=for-the-badge)
 
 </div>
 
 ---
 
-## Screenshot
+## 📸 Preview
 
 <div align="center">
 
 <p align="center">
-  <img src="https://i.ibb.co/N2bTxGrY/v.png" alt="photo" width="820">
+  <img src="https://i.ibb.co/p742wv1/x.png" alt="photo" width="820">
 </p>
 
 </div>
@@ -31,106 +31,117 @@ Modern trading session visualization tool with real-time chart rendering, sessio
 
 <div align="center">
 
-<img src="https://i.imgur.com/8pBsuyr.gif" alt="Demo">
+<img src="https://i.imgur.com/9GGKfBs.gif" alt="Demo">
 
 </div>
 
 ---
 
-## Overview
+## 🎯 What is Smart Money Concept?
 
-Session Highlighter is a visual trading tool focused on highlighting major market sessions directly on the chart.
+Smart Money Concept (SMC) is a trading methodology focused on **institutional behavior** rather than retail indicators.
 
-It provides a clean and responsive interface to track:
+It includes:
+- Market structure (HH, HL, LH, LL)
+- Liquidity zones
+- Order Blocks (OB)
+- Break of Structure (BOS)
+- Change of Character (CHoCH)
+- Fair Value Gaps (FVG)
 
-- London session  
-- New York session  
-- Asia session  
-- Session overlaps  
-
-All rendered in real-time with a custom chart engine.
+This project visualizes all of these in a **clean, modern trading interface**.
 
 ---
 
-## What It Does
-
-This project simulates a full session-based trading environment with visual feedback.
+## ⚙️ What This App Does
 
 | Module | Description |
-|------|--------|
-| Session Engine | Calculates and displays session time ranges |
-| Chart Renderer | Custom candlestick + grid system |
-| Session Overlay | Colors session zones directly on chart |
-| Overlap Detection | Highlights London–NY overlap |
-| Live Price Feed | Simulated real-time price movement |
-| Volume Layer | Optional volume visualization |
+|------|-------------|
+| Market Structure Engine | Detects BOS / CHoCH |
+| Order Block Detection | Bullish & Bearish OB zones |
+| Liquidity Mapping | Buy-side / Sell-side liquidity |
+| FVG Detection | Imbalance zones |
+| Live Chart Engine | Custom-rendered candlestick chart |
+| Zone Tracker | Tracks active & swept zones |
+| UI Dashboard | Institutional-style trading panel |
 
 ---
 
-## Features
+## 🚀 Features
 
 | Feature | Description |
 |--------|------------|
-| Real-Time Chart | Smooth custom-rendered candles |
-| Session Zones | Asia, London, New York overlays |
-| Overlap Highlight | Special zone for session intersections |
-| Live Price Line | Dynamic price tracking |
-| Volume Bars | Optional volume visualization |
-| Pair Selector | EURUSD, GBPUSD, USDJPY, etc. |
-| Timeframes | M1, M5, M15, M30, H1, H4 |
-| Session Cards | Detailed stats per session |
-| Status Tracking | Active / Upcoming / Closed |
-| Visibility Controls | Toggle sessions and volume |
+| 📊 Real-Time Chart | Smooth custom candlestick rendering |
+| 🧠 Smart Money Logic | BOS, OB, Liquidity, FVG |
+| 🎯 Premium/Discount Zones | Equilibrium-based visualization |
+| ⚡ Live Price Feed | Simulated real-time ticks |
+| 🎛 Toggle System | Enable/disable SMC components |
+| 📋 Zone Table | Full zone tracking system |
+| 🎨 Modern UI | Dark institutional trading theme |
+| 🔄 Dynamic Updates | Auto-refreshing structure & price |
 
 ---
 
-## Session Logic
+## 🧠 Smart Money Elements
 
-Each session is mapped to chart time blocks:
+### 🔹 Order Blocks (OB)
+- Institutional accumulation zones  
+- Bullish & Bearish detection  
+- Highlighted directly on chart  
 
-- Asia → 00:00 – 09:00  
-- London → 08:00 – 17:00  
-- New York → 13:00 – 22:00  
-- Overlap → 13:00 – 17:00  
+### 🔹 Break of Structure (BOS)
+- Confirms trend continuation  
+- Visual dashed lines  
 
-Overlap zones are automatically detected and highlighted.
+### 🔹 Liquidity Zones
+- Buy-side & sell-side liquidity  
+- Swept vs intact tracking  
+
+### 🔹 Fair Value Gap (FVG)
+- Market imbalance detection  
+- Highlighted inefficiency zones  
 
 ---
 
-## Interface Structure
+## 📊 Interface Overview
 
 ```
-[ Chart Area ]
- ├── Session Zones (colored)
- ├── Candlesticks
- ├── Volume Bars
- └── Live Price Line
+[ Premium Zone ]
+██████████████
 
-[ Session Cards ]
- ├── Status (Active / Upcoming / Closed)
- ├── Avg Range
- ├── Volume %
+------ Price ------
 
-[ Controls ]
- ├── Pair Selector
- ├── Timeframe Buttons
- ├── Session Toggles
- └── Apply to Chart
+██████████████
+[ Discount Zone ]
 ```
 
----
-
-## System Behavior
-
-- Fully self-contained (no external API)
-- Real-time UI updates
-- Smooth rendering with double buffering
-- Session-aware candle coloring
-- Dynamic status updates
+- 🟢 Green → Bullish zones  
+- 🔴 Red → Bearish zones  
+- 🟡 Gold → Liquidity  
+- 🔵 Blue → FVG  
 
 ---
 
-## Quick Start
+## 🧩 System Behavior
+
+- Fully offline simulation (no API required)  
+- Real-time UI rendering  
+- Dynamic zone updates  
+- Smart filtering (BOS / OB / LIQ / FVG)  
+- Lightweight and fast  
+
+---
+
+## 🖥️ Tech Stack
+
+- C# (.NET 6+)
+- Windows Forms (Custom UI rendering)
+- GDI+ Graphics Engine
+- Real-time simulation engine
+
+---
+
+## ⚡ Quick Start
 
 **Requirements:**
 - Windows 10 / 11  
@@ -138,69 +149,60 @@ Overlap zones are automatically detected and highlighted.
 - Visual Studio 2022  
 
 ```bash
-git clone https://github.com/your-username/session-highlighter.git
+git clone https://github.com/your-username/smart-money-indicator.git
 ```
 
 Open solution → Press **F5**
 
 ---
 
-## How to Use
+## 🧪 How to Use
 
 1. Launch application  
-2. Select trading pair  
-3. Choose timeframe  
-4. Enable / disable sessions  
-5. Click **Apply to Chart**  
-6. Monitor sessions visually  
+2. Select trading pair (EURUSD, XAUUSD, etc.)  
+3. Choose timeframe (M5 → D1)  
+4. Enable/disable SMC components  
+5. Monitor:
+   - Market structure  
+   - Zones  
+   - Liquidity  
+6. Analyze price behavior  
 
 ---
 
-## Visual Behavior
+## 📈 Roadmap
 
-- Blue → London  
-- Orange → New York  
-- Purple → Asia  
-- Green → Overlap  
-
-Candles adapt to session color dynamically.
-
----
-
-## Roadmap
-
-- [x] Custom chart engine  
-- [x] Session overlays  
-- [x] Overlap detection  
-- [x] UI dashboard  
-- [ ] MT5 real integration  
-- [ ] Indicator export (MQ5 / MQ4)  
-- [ ] Strategy signals  
-- [ ] Multi-symbol tracking  
+- [x] Market structure visualization  
+- [x] Order block detection  
+- [x] Liquidity mapping  
+- [x] FVG zones  
+- [ ] Real MT5/MT4 integration  
+- [ ] Strategy builder  
+- [ ] Alerts system  
+- [ ] Multi-chart support  
 
 ---
 
-## Contributing
+## 🤝 Contributing
 
-```
-1. Fork repository
-2. Create feature branch
+```bash
+1. Fork the repo
+2. Create your branch (feature/your-feature)
 3. Commit changes
-4. Push branch
+4. Push to branch
 5. Open Pull Request
 ```
 
 ---
 
-## License
+## 📄 License
 
-MIT
+MIT License
 
 ---
 
 <div align="center">
 
-Session Highlighter MT5/MT4 · v1.0
+Smart Money Indicator · SMC Engine v2.0
 
 </div>
-```
