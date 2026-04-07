@@ -1,8 +1,8 @@
 <div align="center">
 
-# 📊 Position Sizer MT5 / MT4
+# ▦ Risk Management EA
 
-**Professional risk management and position sizing tool for MetaTrader 5 and MetaTrader 4 — built for precision, clarity, and real trading workflows.**
+**Professional position sizing & risk management tool for MetaTrader 5 / MetaTrader 4 — calculate lot size, control risk, and execute trades with precision.**
 
 <br>
 
@@ -16,7 +16,7 @@
 
 ---
 
-## 🖥️ Screenshot
+## Screenshot
 
 <div align="center">
 
@@ -26,163 +26,172 @@
 
 </div>
 
+---
+
+## Demo
+
 <div align="center">
 
-<img src="https://i.imgur.com/6hNZzlh.gif" alt="Demo">
+<img src="https://i.imgur.com/DaqYZlk.gif" alt="Demo">
 
 </div>
 
 ---
 
-## 📌 Overview
+## Why Risk Management?
 
-**Position Sizer MT5/MT4** is a risk management tool designed for traders who want precise control over every trade.
+Most traders fail not because of strategy, but because of poor risk control.
 
-Instead of guessing lot sizes, the system calculates everything automatically based on your risk tolerance and setup.
+This EA focuses on the core of professional trading:
+- Fixed percentage risk
+- Consistent position sizing
+- Controlled drawdown
+- Emotion-free execution
 
-Built with a modern desktop UI inspired by professional trading platforms.
-
----
-
-## ⚙️ What It Does
-
-The application calculates optimal position sizing and visualizes trade risk in real time:
-
-| Metric | Description |
-|---|---|
-| Lot Size | Automatically calculated based on risk and stop loss distance |
-| Risk Amount | Exact dollar value at risk per trade |
-| Reward Amount | Potential profit based on take profit level |
-| Risk/Reward Ratio | Ratio between potential reward and risk |
-| Stop Distance | Calculated in pips depending on instrument |
-| Pip Value | Adjusted per symbol (Forex, Gold, JPY pairs) |
+Whether you trade manually or with automation, proper risk management is what keeps you in the game long term.
 
 ---
 
-## ✨ Features
+## What It Does
+
+**Risk Management EA** provides a full desktop interface to calculate and manage trades before execution:
 
 | Feature | Description |
 |---|---|
-| Real-Time Calculation | Instant updates when changing inputs |
-| Multi-Asset Support | Forex pairs, Gold (XAUUSD), JPY pairs |
-| Risk Slider | Fine-tune risk percentage interactively |
-| BUY / SELL Modes | Direction-based calculations |
-| Risk Meter | Visual gauge showing current risk level |
-| Trade Simulation | Simulate trade execution |
-| Trade History | Track trades with results |
-| Live Price Feed | Simulated real-time price |
-| Modern UI | Clean dark trading dashboard |
+| Lot Size Calculation | Automatically calculates correct lot size based on risk % and stop loss |
+| Risk Amount | Shows exact dollar amount at risk per trade |
+| Reward Projection | Calculates potential profit based on take profit |
+| Risk/Reward Ratio | Displays real-time R:R (e.g. 1:2.0) |
+| Pip Calculation | Converts price distance into pips based on instrument |
+| Live Price | Simulated or real-time price feed |
+| Trade Execution | Open trades directly from the interface |
+| Trade History | Logs previous trades with PnL and win/loss status |
 
 ---
 
-## 🧩 Interface
+## Features
 
-The application is structured into key sections:
-
-- Sidebar — navigation and system overview  
-- Trade Parameters — balance, risk %, entry, SL, TP  
-- Results Panel — lot size, risk, reward, R:R  
-- Risk Meter — visual exposure gauge  
-- Trade History — executed trades  
-
----
-
-## 🧠 Calculation Logic
-
-```
-Risk Amount = Account Balance × Risk %
-
-Lot Size = Risk Amount / (StopLoss Pips × Pip Value)
-
-Reward = Lot Size × TakeProfit Pips × Pip Value
-
-R:R Ratio = Reward / Risk
-```
+| Feature | Description |
+|---|---|
+| Clean UI | Modern dark interface with real-time updates |
+| Multi Pair Support | EURUSD, GBPUSD, XAUUSD, USDJPY, and more |
+| Direction Control | BUY / SELL toggle with instant recalculation |
+| Risk Slider | Adjust risk visually (0.1% – 10%) |
+| Real-Time Metrics | Lot size, risk $, reward $, R:R |
+| MT4 / MT5 Support | Switch platform directly in UI |
+| Connection Manager | Simulated broker connection system |
+| Trade Button | Execute trades with one click |
+| Risk Gauge | Visual risk meter (low / moderate / high) |
+| History Panel | Track performance and previous trades |
 
 ---
 
-## 📉 Risk Visualization
+## Designed for Real Trading
 
-The built-in **Risk Meter** gives instant feedback:
-
-- Low Risk → below 1.5%  
-- Moderate Risk → 1.5% – 3%  
-- High Risk → above 3%  
-
-Helps prevent overexposure and poor risk decisions.
+- No over-risking — strict % based calculation  
+- Instant feedback — everything updates in real time  
+- Platform ready — MT4 / MT5 compatible structure  
+- Discipline focused — removes emotional decision making  
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 **Requirements:**
-- Windows 10 / 11  
-- .NET 6+  
-- Visual Studio 2022  
+- Windows 10 / 11
+- .NET 6+
+- Visual Studio 2022
 
 ```bash
-git clone https://github.com/your-username/position-sizer-mt5.git
-```
+# Clone repository
+git clone https://github.com/your-username/risk-management-ea.git
 
-Run the project:
+# Open solution
+# File → Open → Solution (.sln)
 
-```
+# Run
 F5
 ```
 
 ---
 
-## 📖 How to Use
+## How to Use
 
-1. Enter account balance  
-2. Set risk percentage  
-3. Define entry, stop loss, take profit  
-4. Select BUY or SELL  
-5. Review calculated values  
-6. Click OPEN TRADE to simulate  
-7. Monitor results in history  
-
----
-
-## 🎯 Designed for Trading
-
-- Fast and responsive  
-- Clear visual feedback  
-- Focused on decision making  
-- No unnecessary complexity  
-
----
-
-## 🛣️ Roadmap
-
-- [ ] MT5 native integration (MQL5)
-- [ ] MT4 version
-- [ ] Real broker connection
-- [ ] Auto execution
-- [ ] Advanced analytics
-- [ ] Export trade history
+1. Select trading pair (EURUSD, XAUUSD, etc.)
+2. Choose BUY or SELL
+3. Enter:
+   - Account balance
+   - Risk %
+   - Entry price
+   - Stop loss
+   - Take profit
+4. Click **CALCULATE**
+5. Review:
+   - Lot size
+   - Risk amount
+   - Reward
+   - R:R ratio
+6. Connect to platform (MT4 / MT5)
+7. Click **OPEN TRADE**
 
 ---
 
-## 🤝 Contributing
+## Calculation Logic
 
 ```
-1. Fork the repository
-2. Create a branch
-3. Commit changes
-4. Open a pull request
+Risk Amount = Balance × Risk %
+
+Lot Size = Risk Amount / (Stop Loss Pips × Pip Value)
+
+Reward = Lot Size × Take Profit Pips × Pip Value
+
+R:R = Reward / Risk
 ```
 
 ---
 
-## 📄 License
+## Trade Flow
 
-MIT License
+```
+Input → Calculate → Validate Risk → Connect → Execute Trade
+```
+
+---
+
+## Roadmap
+
+- [x] Position sizing engine
+- [x] Risk / Reward calculation
+- [x] Trade history tracking
+- [x] Risk gauge visualization
+- [ ] Real MT5 API integration
+- [ ] Auto SL/TP placement
+- [ ] Max daily loss limiter
+- [ ] Multi-account support
+- [ ] Telegram alerts
+
+---
+
+## Contributing
+
+```
+1. Fork the repo
+2. Create branch: git checkout -b feature/improvement
+3. Commit: git commit -m "Add feature"
+4. Push: git push origin feature/improvement
+5. Open Pull Request
+```
+
+---
+
+## License
+
+MIT — free to use and modify.
 
 ---
 
 <div align="center">
 
-Position Sizer MT5/MT4 · Risk Management Tool · v1.0.0
+Risk Management EA · Built for disciplined trading
 
 </div>
