@@ -1,27 +1,26 @@
 <div align="center">
 
-# ⚡ Scalping Bot MT5/MT4
+# Session Highlighter MT5/MT4
 
-**High-frequency scalping bot with real-time signal generation, trade simulation, and a modern desktop trading interface. Designed for ultra-fast M1 / M5 execution workflows.**
+Modern trading session visualization tool with real-time chart rendering, session overlays, and a custom-built desktop interface. Designed for traders who want clean, fast, and informative session-based analysis.
 
 <br>
 
-[![Stars](https://img.shields.io/github/stars/torvalds/linux?style=for-the-badge&color=00D4AA&label=Stars)](https://github.com/your-username/volume-profile-mt5/stargazers)
-[![Forks](https://img.shields.io/github/forks/torvalds/linux?style=for-the-badge&color=4D9FFF&label=Forks)](https://github.com/your-username/volume-profile-mt5/network)
-[![Issues](https://img.shields.io/github/issues/torvalds/linux?style=for-the-badge&color=FF4D6A&label=Issues)](https://github.com/your-username/volume-profile-mt5/issues)
-[![Platform](https://img.shields.io/badge/MT5%20%2F%20MT4-Compatible-00D4AA?style=for-the-badge)](https://www.metatrader5.com)
+[![Platform](https://img.shields.io/badge/MT5%20%2F%20MT4-Compatible-4D9FFF?style=for-the-badge)](https://www.metatrader5.com)
+[![UI](https://img.shields.io/badge/Interface-Modern%20Desktop-00D4AA?style=for-the-badge)]
+[![Status](https://img.shields.io/badge/Status-Active-00D4AA?style=for-the-badge)]
 [![License](https://img.shields.io/badge/License-MIT-4D9FFF?style=for-the-badge)](LICENSE)
 
 </div>
 
 ---
 
-## 📸 Screenshot
+## Screenshot
 
 <div align="center">
 
 <p align="center">
-  <img src="https://i.ibb.co/fVbFhSmG/Screenshot-1.png" alt="photo" width="820">
+  <img src="https://i.ibb.co/N2bTxGrY/v.png" alt="photo" width="820">
 </p>
 
 </div>
@@ -32,53 +31,92 @@
 
 <div align="center">
 
-<img src="https://i.imgur.com/68qDtiY.gif" alt="Demo">
+<img src="https://i.imgur.com/xiaZkzB.gif" alt="Demo">
 
 </div>
 
-
 ---
 
-## Why Scalping?
+## Overview
 
-Scalping is one of the fastest trading strategies, focused on capturing small price movements in very short timeframes.
+Session Highlighter is a visual trading tool focused on highlighting major market sessions directly on the chart.
 
-This project simulates that environment with:
-- Real-time data flow  
-- Instant signal execution  
-- Risk-based trade management  
+It provides a clean and responsive interface to track:
+
+- London session  
+- New York session  
+- Asia session  
+- Session overlaps  
+
+All rendered in real-time with a custom chart engine.
 
 ---
 
 ## What It Does
 
-**Scalping Bot MT5/MT4** provides a complete simulation environment for fast trading systems.
+This project simulates a full session-based trading environment with visual feedback.
 
 | Module | Description |
-|---|---|
-| Signal Engine | Generates BUY / SELL signals |
-| Trade Execution | Handles SL / TP and closes trades |
-| Live Price Feed | Simulated real-time price updates |
-| Risk Engine | Calculates lot size and trade risk |
-| Trade History | Logs all executed trades |
-| Session Stats | Tracks performance and balance |
+|------|--------|
+| Session Engine | Calculates and displays session time ranges |
+| Chart Renderer | Custom candlestick + grid system |
+| Session Overlay | Colors session zones directly on chart |
+| Overlap Detection | Highlights London–NY overlap |
+| Live Price Feed | Simulated real-time price movement |
+| Volume Layer | Optional volume visualization |
 
 ---
 
 ## Features
 
 | Feature | Description |
-|---|---|
-| Real-Time Chart | Custom rendered chart with live updates |
-| SL / TP Zones | Visual stop-loss and take-profit areas |
-| Auto Signals | Continuous BUY / SELL signal generation |
-| Bot Control | Start / Stop with live status |
-| MT4 / MT5 Support | Platform selection system |
-| Pair Selector | EURUSD, GBPUSD, XAUUSD and more |
-| Timeframes | M1, M5, M15, M30 |
-| Trade Table | Full signal history with P&L |
-| Stats Panel | Balance, win rate, trades |
-| Risk Settings | Lot size, SL, TP controls |
+|--------|------------|
+| Real-Time Chart | Smooth custom-rendered candles |
+| Session Zones | Asia, London, New York overlays |
+| Overlap Highlight | Special zone for session intersections |
+| Live Price Line | Dynamic price tracking |
+| Volume Bars | Optional volume visualization |
+| Pair Selector | EURUSD, GBPUSD, USDJPY, etc. |
+| Timeframes | M1, M5, M15, M30, H1, H4 |
+| Session Cards | Detailed stats per session |
+| Status Tracking | Active / Upcoming / Closed |
+| Visibility Controls | Toggle sessions and volume |
+
+---
+
+## Session Logic
+
+Each session is mapped to chart time blocks:
+
+- Asia → 00:00 – 09:00  
+- London → 08:00 – 17:00  
+- New York → 13:00 – 22:00  
+- Overlap → 13:00 – 17:00  
+
+Overlap zones are automatically detected and highlighted.
+
+---
+
+## Interface Structure
+
+```
+[ Chart Area ]
+ ├── Session Zones (colored)
+ ├── Candlesticks
+ ├── Volume Bars
+ └── Live Price Line
+
+[ Session Cards ]
+ ├── Status (Active / Upcoming / Closed)
+ ├── Avg Range
+ ├── Volume %
+
+[ Controls ]
+ ├── Pair Selector
+ ├── Timeframe Buttons
+ ├── Session Toggles
+ └── Apply to Chart
+```
 
 ---
 
@@ -86,8 +124,9 @@ This project simulates that environment with:
 
 - Fully self-contained (no external API)
 - Real-time UI updates
-- Auto-stop on disconnect
-- Smooth rendering and fast response
+- Smooth rendering with double buffering
+- Session-aware candle coloring
+- Dynamic status updates
 
 ---
 
@@ -99,7 +138,7 @@ This project simulates that environment with:
 - Visual Studio 2022  
 
 ```bash
-git clone https://github.com/your-username/scalping-bot.git
+git clone https://github.com/your-username/session-highlighter.git
 ```
 
 Open solution → Press **F5**
@@ -108,52 +147,47 @@ Open solution → Press **F5**
 
 ## How to Use
 
-1. Launch app  
-2. Select MT4 / MT5  
-3. Enter login  
-4. Click **CONNECT**  
-5. Choose pair & timeframe  
-6. Adjust Lot / SL / TP  
-7. Click **START BOT**  
-8. Monitor signals live  
+1. Launch application  
+2. Select trading pair  
+3. Choose timeframe  
+4. Enable / disable sessions  
+5. Click **Apply to Chart**  
+6. Monitor sessions visually  
 
 ---
 
-## Interface Logic
+## Visual Behavior
 
-```
-TP ZONE  █████████████
-PRICE    ─────────────
-SL ZONE  █████████████
-```
+- Blue → London  
+- Orange → New York  
+- Purple → Asia  
+- Green → Overlap  
 
-- Green = profit  
-- Red = loss  
-- Signals appear dynamically  
-- Trades logged below  
+Candles adapt to session color dynamically.
 
 ---
 
 ## Roadmap
 
-- [x] Price simulation  
-- [x] Signal engine  
+- [x] Custom chart engine  
+- [x] Session overlays  
+- [x] Overlap detection  
 - [x] UI dashboard  
-- [ ] Real MT5 integration  
-- [ ] Strategy system (EMA / RSI)  
-- [ ] Backtesting  
-- [ ] Multi-pair support  
+- [ ] MT5 real integration  
+- [ ] Indicator export (MQ5 / MQ4)  
+- [ ] Strategy signals  
+- [ ] Multi-symbol tracking  
 
 ---
 
 ## Contributing
 
 ```
-1. Fork
-2. git checkout -b feature/new-feature
-3. git commit -m "Add feature"
-4. git push
-5. Open PR
+1. Fork repository
+2. Create feature branch
+3. Commit changes
+4. Push branch
+5. Open Pull Request
 ```
 
 ---
@@ -166,6 +200,8 @@ MIT
 
 <div align="center">
 
-Scalping Bot MT5/MT4 · v1.0
+Session Highlighter MT5/MT4 · v1.0
 
 </div>
+```
+
