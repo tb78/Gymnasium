@@ -31,7 +31,7 @@ Modern trading session visualization tool with real-time chart rendering, sessio
 
 <div align="center">
 
-<img src="https://i.imgur.com/xiaZkzB.gif" alt="Demo">
+<img src="https://i.imgur.com/8pBsuyr.gif" alt="Demo">
 
 </div>
 
@@ -204,4 +204,3 @@ Session Highlighter MT5/MT4 · v1.0
 
 </div>
 ```
-
