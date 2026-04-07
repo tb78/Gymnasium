@@ -21,7 +21,7 @@
 <div align="center">
 
 <p align="center">
-  <img src="https://i.ibb.co/0j46J8mB/Screenshot-1.png" alt="photo" width="820">
+  <img src="https://i.ibb.co/LsRt5jm/Screenshot-1.png" alt="photo" width="820">
 </p>
 
 </div>
